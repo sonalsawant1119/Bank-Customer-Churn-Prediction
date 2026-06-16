@@ -1,23 +1,21 @@
 import streamlit as st
 import pandas as pd
-import pickle
 import plotly.graph_objects as go
 import matplotlib.pyplot as plt
 import seaborn as sns
+import joblib
+
+model = joblib.load("churn_model.pkl")
 
 
 # -------------------------------
 # Load Model and Files
 # -------------------------------
 
-model = pickle.load(
-    open("churn_model.pkl", "rb")
-)
+model = joblib.load("churn_model.pkl")
 
-features = pickle.load(
-    open("features.pkl", "rb")
-)
 
+features = joblib.load("features.pkl")
 
 importance = pd.read_csv(
     "feature_importance.csv"
