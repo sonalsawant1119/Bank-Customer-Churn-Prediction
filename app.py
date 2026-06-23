@@ -240,8 +240,8 @@ st.markdown("""
 # -------------------------------
 st.markdown("""
 <div class="hero">
-    <h1>🏦 Bank Churn Intelligence</h1>
-    <p>AI-powered customer retention & risk scoring dashboard</p>
+    <h1>🏦 Bank Customer Churn Risk Prediction System</h1>
+    <p>Machine Learning based customer churn prediction and risk scoring dashboard</p>
 </div>
 """, unsafe_allow_html=True)
 
