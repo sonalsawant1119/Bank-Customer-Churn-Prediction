@@ -23,7 +23,7 @@ st.set_page_config(
 )
 
 # -------------------------------
-# Custom CSS — Advanced Design
+# Custom CSS — Neon Black Theme
 # -------------------------------
 st.markdown("""
 <style>
@@ -36,20 +36,21 @@ st.markdown("""
     }
 
     .main {
-        background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+        background: #000000 !important;
     }
 
     .stApp {
-        background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #0f172a 100%);
+        background: #000000 !important;
     }
 
     /* Hero header */
     .hero {
-        background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #ec4899 100%);
+        background: linear-gradient(135deg, #000000 0%, #0a0a0a 50%, #000000 100%);
+        border: 2px solid #00f0ff;
         padding: 2.5rem 2rem;
         border-radius: 20px;
         margin-bottom: 2rem;
-        box-shadow: 0 20px 60px rgba(99, 102, 241, 0.3);
+        box-shadow: 0 0 30px rgba(0, 240, 255, 0.3), inset 0 0 20px rgba(0, 240, 255, 0.05);
         position: relative;
         overflow: hidden;
     }
@@ -58,19 +59,20 @@ st.markdown("""
         position: absolute;
         top: -50%; right: -10%;
         width: 400px; height: 400px;
-        background: radial-gradient(circle, rgba(255,255,255,0.15), transparent);
+        background: radial-gradient(circle, rgba(0, 240, 255, 0.15), transparent);
         border-radius: 50%;
     }
     .hero h1 {
         font-family: 'Space Grotesk', sans-serif;
         font-size: 2.8rem;
         font-weight: 700;
-        color: white;
+        color: #00f0ff;
         margin: 0;
         letter-spacing: -0.02em;
+        text-shadow: 0 0 20px rgba(0, 240, 255, 0.5);
     }
     .hero p {
-        color: rgba(255,255,255,0.9);
+        color: #a0a0a0;
         font-size: 1.1rem;
         margin-top: 0.5rem;
         margin-bottom: 0;
@@ -79,108 +81,157 @@ st.markdown("""
     /* Section headings */
     h1, h2, h3 {
         font-family: 'Space Grotesk', sans-serif !important;
-        color: #f1f5f9 !important;
+        color: #00f0ff !important;
         letter-spacing: -0.01em;
+        text-shadow: 0 0 10px rgba(0, 240, 255, 0.3);
     }
 
     /* Card containers */
     .card {
-        background: rgba(30, 41, 59, 0.6);
-        backdrop-filter: blur(20px);
-        border: 1px solid rgba(148, 163, 184, 0.15);
+        background: #0a0a0a;
+        border: 1px solid #1a1a1a;
         border-radius: 16px;
         padding: 1.5rem;
         margin-bottom: 1rem;
-        box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+        box-shadow: 0 0 20px rgba(0, 240, 255, 0.05);
     }
 
     /* Inputs */
     .stNumberInput input, .stSelectbox div[data-baseweb="select"] > div {
-        background-color: rgba(15, 23, 42, 0.8) !important;
-        border: 1px solid rgba(99, 102, 241, 0.3) !important;
+        background-color: #0a0a0a !important;
+        border: 1px solid #00f0ff !important;
         border-radius: 10px !important;
-        color: #f1f5f9 !important;
+        color: #ffffff !important;
+        box-shadow: 0 0 8px rgba(0, 240, 255, 0.15);
     }
     .stNumberInput input:focus {
-        border-color: #6366f1 !important;
-        box-shadow: 0 0 0 3px rgba(99,102,241,0.2) !important;
+        border-color: #39ff14 !important;
+        box-shadow: 0 0 0 3px rgba(57, 255, 20, 0.2) !important;
     }
     label, .stSelectbox label, .stNumberInput label {
-        color: #cbd5e1 !important;
+        color: #00f0ff !important;
         font-weight: 500 !important;
         font-size: 0.9rem !important;
+        text-shadow: 0 0 5px rgba(0, 240, 255, 0.3);
     }
 
     /* Buttons */
     .stButton > button {
-        background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
-        color: white;
-        border: none;
+        background: transparent;
+        color: #00f0ff;
+        border: 2px solid #00f0ff;
         border-radius: 12px;
         padding: 0.75rem 2rem;
         font-weight: 600;
         font-size: 1rem;
         width: 100%;
         transition: all 0.3s ease;
-        box-shadow: 0 4px 20px rgba(99, 102, 241, 0.4);
+        box-shadow: 0 0 15px rgba(0, 240, 255, 0.3);
+        text-shadow: 0 0 10px rgba(0, 240, 255, 0.5);
     }
     .stButton > button:hover {
+        background: rgba(0, 240, 255, 0.1);
         transform: translateY(-2px);
-        box-shadow: 0 8px 30px rgba(99, 102, 241, 0.6);
+        box-shadow: 0 0 30px rgba(0, 240, 255, 0.6);
     }
 
     /* Metric */
     [data-testid="stMetric"] {
-        background: linear-gradient(135deg, rgba(99,102,241,0.15), rgba(139,92,246,0.15));
-        border: 1px solid rgba(99,102,241,0.3);
+        background: #0a0a0a;
+        border: 1px solid #00f0ff;
         border-radius: 16px;
         padding: 1.5rem;
-        box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+        box-shadow: 0 0 20px rgba(0, 240, 255, 0.15);
     }
     [data-testid="stMetricLabel"] {
-        color: #cbd5e1 !important;
+        color: #a0a0a0 !important;
         font-weight: 500;
     }
     [data-testid="stMetricValue"] {
-        color: #f1f5f9 !important;
+        color: #39ff14 !important;
         font-family: 'Space Grotesk', sans-serif;
         font-size: 2.5rem !important;
+        text-shadow: 0 0 15px rgba(57, 255, 20, 0.5);
     }
 
     /* Sidebar */
     [data-testid="stSidebar"] {
-        background: linear-gradient(180deg, #1e1b4b 0%, #0f172a 100%);
-        border-right: 1px solid rgba(99,102,241,0.2);
+        background: #000000 !important;
+        border-right: 1px solid #00f0ff;
+        box-shadow: 0 0 20px rgba(0, 240, 255, 0.1);
     }
     [data-testid="stSidebar"] h2 {
-        background: linear-gradient(135deg, #a78bfa, #f0abfc);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+        color: #00f0ff !important;
+        text-shadow: 0 0 10px rgba(0, 240, 255, 0.5);
         font-weight: 700;
+    }
+    [data-testid="stSidebar"] p {
+        color: #a0a0a0 !important;
     }
 
     /* Alerts */
     .stAlert {
         border-radius: 12px;
-        border: none;
-        backdrop-filter: blur(10px);
+        border: 1px solid !important;
+        background: #0a0a0a !important;
+    }
+    .stAlert [data-baseweb="notification"] {
+        background: #0a0a0a !important;
     }
 
     /* Tables */
     .stTable, .dataframe {
-        background: rgba(30,41,59,0.6) !important;
+        background: #0a0a0a !important;
+        border: 1px solid #00f0ff !important;
         border-radius: 12px;
         overflow: hidden;
+    }
+    .dataframe th {
+        background: #000000 !important;
+        color: #00f0ff !important;
+        border-bottom: 1px solid #00f0ff !important;
+    }
+    .dataframe td {
+        color: #ffffff !important;
+    }
+    .dataframe tr:hover {
+        background: rgba(0, 240, 255, 0.05) !important;
+    }
+
+    /* Slider */
+    .stSlider [data-baseweb="slider"] {
+        background: #0a0a0a !important;
+    }
+    .stSlider [data-baseweb="slider"] [role="slider"] {
+        border-color: #00f0ff !important;
+        background: #00f0ff !important;
+        box-shadow: 0 0 10px rgba(0, 240, 255, 0.5) !important;
     }
 
     /* Divider accent */
     .accent-line {
         height: 3px;
-        background: linear-gradient(90deg, #6366f1, #ec4899, transparent);
+        background: linear-gradient(90deg, #00f0ff, #39ff14, #ff073a, transparent);
         border-radius: 2px;
         margin: 2rem 0 1rem 0;
-        width: 80px;
+        width: 120px;
+        box-shadow: 0 0 10px rgba(0, 240, 255, 0.4);
     }
+
+    /* Markdown text colors */
+    p, li, span {
+        color: #e0e0e0 !important;
+    }
+
+    /* Selectbox dropdown */
+    div[data-baseweb="popover"] ul li {
+        background: #0a0a0a !important;
+        color: #ffffff !important;
+    }
+    div[data-baseweb="popover"] ul li:hover {
+        background: rgba(0, 240, 255, 0.1) !important;
+    }
+
 </style>
 """, unsafe_allow_html=True)
 
@@ -232,7 +283,7 @@ scenario_active = st.sidebar.selectbox("Change Active Member", [0, 1], index=act
 # -------------------------------
 # Prediction Button
 # -------------------------------
-st.markdown("<br>", unsafe_allow_html=True)
+st.markdown('<div class="accent-line"></div>', unsafe_allow_html=True)
 if st.button("🚀 Predict Churn Risk"):
 
     input_data = pd.DataFrame({
@@ -286,33 +337,34 @@ if st.button("🚀 Predict Churn Risk"):
         st.metric("Churn Probability", f"{probability*100:.2f}%")
 
     with res_col2:
-        # Polished Gauge Chart
-        gauge_color = "#10b981" if risk == "Low Risk" else "#f59e0b" if risk == "Medium Risk" else "#ef4444"
+        # Neon Gauge Chart
+        gauge_color = "#39ff14" if risk == "Low Risk" else "#fffc00" if risk == "Medium Risk" else "#ff073a"
         fig = go.Figure(go.Indicator(
             mode="gauge+number",
             value=probability * 100,
-            number={'suffix': "%", 'font': {'size': 40, 'color': '#f1f5f9'}},
-            title={"text": "Churn Risk Score", 'font': {'size': 18, 'color': '#cbd5e1'}},
+            number={'suffix': "%", 'font': {'size': 40, 'color': '#ffffff'}},
+            title={"text": "Churn Risk Score", 'font': {'size': 18, 'color': '#00f0ff'}},
             gauge={
-                "axis": {"range": [0, 100], 'tickcolor': '#64748b', 'tickfont': {'color': '#94a3b8'}},
+                "axis": {"range": [0, 100], 'tickcolor': '#00f0ff', 'tickfont': {'color': '#00f0ff'}},
                 "bar": {"color": gauge_color, 'thickness': 0.3},
-                "bgcolor": "rgba(15,23,42,0.5)",
-                "borderwidth": 0,
+                "bgcolor": "#0a0a0a",
+                "borderwidth": 2,
+                "bordercolor": "#00f0ff",
                 "steps": [
-                    {"range": [0, 40], "color": "rgba(16,185,129,0.2)"},
-                    {"range": [40, 70], "color": "rgba(245,158,11,0.2)"},
-                    {"range": [70, 100], "color": "rgba(239,68,68,0.2)"},
+                    {"range": [0, 40], "color": "rgba(57, 255, 20, 0.15)"},
+                    {"range": [40, 70], "color": "rgba(255, 252, 0, 0.15)"},
+                    {"range": [70, 100], "color": "rgba(255, 7, 58, 0.15)"},
                 ],
                 "threshold": {
-                    "line": {"color": "white", "width": 3},
+                    "line": {"color": "#ffffff", "width": 3},
                     "thickness": 0.75,
                     "value": probability * 100
                 }
             }
         ))
         fig.update_layout(
-            paper_bgcolor='rgba(0,0,0,0)',
-            font={'color': '#f1f5f9'},
+            paper_bgcolor='#000000',
+            font={'color': '#ffffff'},
             height=320,
             margin=dict(l=20, r=20, t=60, b=20)
         )
@@ -335,22 +387,27 @@ if st.button("🚀 Predict Churn Risk"):
     st.markdown("### 📊 Top Drivers of Customer Churn")
     st.markdown('<div class="accent-line"></div>', unsafe_allow_html=True)
 
-    plt.style.use('dark_background')
     fig2, ax = plt.subplots(figsize=(10, 5))
-    fig2.patch.set_facecolor('#0f172a')
-    ax.set_facecolor('#0f172a')
+    fig2.patch.set_facecolor('#000000')
+    ax.set_facecolor('#000000')
+
+    # Custom neon palette
+    neon_palette = ["#00f0ff", "#39ff14", "#00f0ff", "#39ff14", "#fffc00",
+                    "#ff073a", "#00f0ff", "#39ff14", "#fffc00", "#ff073a"]
 
     sns.barplot(
         data=importance.head(10),
         x="Importance", y="Feature",
         ax=ax,
-        palette="mako"
+        palette=neon_palette[:len(importance.head(10))]
     )
-    ax.set_xlabel("Importance", color='#cbd5e1', fontsize=11)
-    ax.set_ylabel("Feature", color='#cbd5e1', fontsize=11)
-    ax.tick_params(colors='#94a3b8')
-    for spine in ax.spines.values():
-        spine.set_color('#334155')
+    ax.set_xlabel("Importance", color='#00f0ff', fontsize=11)
+    ax.set_ylabel("Feature", color='#00f0ff', fontsize=11)
+    ax.tick_params(colors='#00f0ff')
+    ax.spines['bottom'].set_color('#00f0ff')
+    ax.spines['left'].set_color('#00f0ff')
+    ax.spines['top'].set_visible(False)
+    ax.spines['right'].set_visible(False)
     st.pyplot(fig2)
 
     # -------------------------------
